@@ -1,0 +1,62 @@
+/*tag selector*/
+p {
+    color: red;
+}
+
+h1 {
+    color: white;
+    background: blue;
+}
+
+/* class selector*/
+.underline-text {
+    text-decoration: underline;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+/*id selector*/
+#top {
+    font-family: "Comic Sans MS";
+}
+
+/*attribute selector*/
+[href] {
+    color: green;
+}
+
+[href="#top"] {
+    font-size: 24px;
+}
+
+/* child selector*/
+ul li {
+    list-style: square;
+}
+
+/*ol li {*/
+/*list-style: circle;*/
+/*}*/
+
+/* direct child selector*/
+ul > li {
+    list-style: upper-alpha;
+}
+
+li:last-child {
+    font-style: italic;
+}
+
+nav:hover {
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+a:active {
+    color: brown;
+}
+
+input:focus { /*đang dung đến*/
+    border: 1px dashed red;
+}
