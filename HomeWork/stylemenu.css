@@ -27,7 +27,6 @@
     background: #D5B0AC;
     display: block;
     border-top: 1px solid rgba(255, 255, 255, 0.5); /* white border with opacity 50% */
-    line-height: 30px;
 }
 
 .menu_vertical span:hover{
