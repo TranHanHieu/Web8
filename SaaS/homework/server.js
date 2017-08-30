@@ -20,8 +20,17 @@ app.get('/readfile', (req, res) => {
     res.send(`
         <html>
             <head> <meta charset="utf-8">
-                <title></title>
-                <link rel="stylesheet" href="stylemenu.css">
+                 <title></title>
+                 <style>
+                      body {
+                          display: block;
+                          margin: 0px;
+                      }
+                 </style>
+                 <link rel="stylesheet" href="stylemenu.css">
+                 <link type="text/css" rel="stylesheet" href="styleabout.css">
+                 <link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700|Lato:400,300' rel='stylesheet' type='text/css'>
+
             </head>
             <body>
                 <nav class="menu">
@@ -30,7 +39,7 @@ app.get('/readfile', (req, res) => {
                     <span onclick="location='/readfile'">Read File</span>
                     <span>Item 4</span>
                 </nav>
-                <h1> ${data} </h1>
+                <h1 style="color: #FFFFFF"> ${data} </h1>
             </body>
         </html>`);
 });
