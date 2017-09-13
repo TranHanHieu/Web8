@@ -13,6 +13,7 @@ app.engine('handlebars', handlebars({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
 app.use(bodyParser.urlencoded({ extended: true}));
+app.use(express.static(__dirname + '/public'));
 
 
 app.use('/', homeRouter);
@@ -20,7 +21,7 @@ app.use('/ask', askQuestionRouter);
 app.use('/add', addQuestionRouter);
 app.use('/question', questionRouter);
 
-app.get('/About', (req, res) => {
+app.get('/about', (req, res) => {
     res.render('about');
 });
 

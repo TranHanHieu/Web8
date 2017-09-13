@@ -1,5 +1,9 @@
-.home.question{
-    text-align: center;
+
+.home.question {
+    position: fixed;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 0);
 }
 
 .about {
@@ -15,16 +19,17 @@
 input.home {
     text-align: center;
     position: absolute;
+    top: 50%;
+    height: 50px;
+    width: 100px;
 }
 
 input.yes {
-    position: relative;
+    left: 40%;
+    transform: translate(-60%, 0);
 }
 
 input.no {
-    position: relative;
-}
-
-.col-centered{
-    text-align: center;
+    left: 60%;
+    transform: translate(-40%, 0);
 }
