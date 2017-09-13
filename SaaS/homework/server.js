@@ -27,7 +27,7 @@ app.get('/readfile', (req, res) => {
                           margin: 0px;
                       }
                  </style>
-                 <link rel="stylesheet" href="stylemenu.css">
+                 <link rel="stylesheet" href="../public/stylemenu.css">
                  <link type="text/css" rel="stylesheet" href="styleabout.css">
                  <link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700|Lato:400,300' rel='stylesheet' type='text/css'>
 
