@@ -1,6 +1,39 @@
+
 <title>Home</title>
-<h1 class="home question">{{question}}</h1>
-<form class="" action="{{{href}}}" method="post">
-    <input class="home yes" type="submit" name="choice" value="Có" style="visibility: {{visibility}}">
-    <input class="home no" type="submit" name="choice" value="Không" style="visibility: {{visibility}}">
-</form>
+<div class="row" style="text-align: center">
+    <h1 id="question" class="home question" style="display: block">{{question.question}}</h1>
+</div>
+<div class="row" style="text-align: center; margin-top: 30px">
+    <form class="" action="" method="post">
+        <div class="col-sm-3"> </div>
+        <div class="col-sm-3 col-centered">
+            <button class="btn btn-lg btn-primary home yes" type="button" name="choice" style="visibility: {{visibility}}"> Sai / Không / Trái </button>
+        </div>
+        <div class="col-sm-3 col-centered">
+            <button class="btn btn-lg btn-danger home no" type="button" name="choice"  style="visibility: {{visibility}}"> Đúng / Có / Phải </button>
+        </div>
+        <div class="col-sm-3"> </div>
+    </form>
+</div>
+
+<div class="row" style="margin-top: 30px">
+    <div class="col-sm-5"></div>
+    <div class="col-sm-1" style="text-align: right">
+        <button type="button" class="btn btn-default">Kết quả vote</button>
+    </div>
+    <div class="col-sm-1" style="text-align: left">
+        <button type="button" class="btn btn-default">Câu hỏi khác</button>
+    </div>
+    <div class="col-sm-5"></div>
+</div>
+<script>
+  $.ajax({
+    type  : 'get',
+    url   : '/api/question/'
+  }).done((data) => {
+    $("#question").html(data.question);
+    $("form").attr("action", "/api/question/" + data.id);
+  }).fail((err) => {
+    console.error(err);
+  });
+</script>

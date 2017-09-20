@@ -1,17 +1,4 @@
-<div class="row" style="text-align: center">
-    <h1 class="ask ">Hỏi cộng đồng một câu hỏi đúng/sai hoặc có không: </h1>
-</div>
-
-<div class="row">
-    <div class="col-sm-2"></div>
-    <div class="col-sm-8">
-        <form class="form" action="/add/question"  method="post">
-            <textarea class="form-control" rows="10" id="comment"></textarea>
-        </form>
-    </div>
-    <div class="col-sm-2"></div>
-</div>
-
-<div class="row" style="text-align: center; margin-top: 30px">
-    <button type="button" class="btn btn-primary">Gửi</button>
-</div>
+<form method="post" action="/api/question">
+  <input type="text" name="question" />
+  <input type="submit" />
+</form>
